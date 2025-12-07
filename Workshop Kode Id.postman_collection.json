@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "efa2b81d-1601-47f3-9f22-90f9917e47f2",
+		"name": "Workshop Kode Id",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17494311"
+	},
+	"item": [
+		{
+			"name": "Sesi 4",
+			"item": [
+				{
+					"name": "Chatbot",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"prompt\": \"hello there\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/generate-text",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"generate-text"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Define picture",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/art/1685693610036.jpg"
+								},
+								{
+									"key": "prompt",
+									"value": "gambar apa ini?",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/generate-vision",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"generate-vision"
+							],
+							"query": [
+								{
+									"key": "image",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Define document",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/E:/Work/Bootcamp Batch 2 Installation.pdf"
+								},
+								{
+									"key": "prompt",
+									"value": "what kind is this document about?",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/analyze-document",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"analyze-document"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate-image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"prompt\": \"logo kepala serigala minimalis dengan style garis tebal coba lebih bagus\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/generate-image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"generate-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Define audio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "audio",
+									"type": "file",
+									"src": "/E:/Music/Ballad For Romantic - Ellena Must Dance (Official Music Video).mp3"
+								},
+								{
+									"key": "prompt",
+									"value": "tulis lyric nya",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/generate-from-audio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"generate-from-audio"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
